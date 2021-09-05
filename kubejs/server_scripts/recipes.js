@@ -8,7 +8,7 @@ onEvent('recipes', event => {
         P: 'minecraft:blaze_powder',
         E: 'minecraft:egg',
         G: '#forge:ingots/gold'
-    });
+    }).id('warchasers:bee_spawn_egg');
     event.shaped('minecraft:cobweb', [
         'SBS',
         'BSB',
@@ -16,7 +16,7 @@ onEvent('recipes', event => {
     ], {
         B: '#forge:slimeballs',
         S: 'minecraft:string'
-    });
+    }).id('warchasers:cobweb');
     event.shaped('minecraft:dragon_head', [
         'OOO',
         'EOE',
@@ -24,9 +24,9 @@ onEvent('recipes', event => {
     ], {
         E: 'minecraft:ender_pearl',
         O: 'minecraft:obsidian'
-    });
-    event.shapeless('minecraft:mycelium', ['minecraft:grass_block', '#forge:mushrooms']);
-    event.shapeless('minecraft:grass_block', ['minecraft:dirt', 'minecraft:grass']);
+    }).id('warchasers:dragon_head');
+    event.shapeless('minecraft:mycelium', ['minecraft:grass_block', '#forge:mushrooms']).id('warchasers:mycelium');
+    event.shapeless('minecraft:grass_block', ['minecraft:dirt', 'minecraft:grass']).id('warchasers:grass_block');
     event.shaped('minecraft:trident', [
         'DND',
         'DSD',
@@ -35,7 +35,7 @@ onEvent('recipes', event => {
         D: 'minecraft:diamond',
         N: 'minecraft:nether_star',
         S: 'minecraft:stick'
-    });
+    }).id('warchasers:trident');
     event.shaped('minecraft:bell', [
         'GGG',
         'GIG',
@@ -43,7 +43,7 @@ onEvent('recipes', event => {
     ], {
         I: '#forge:nuggets/iron',
         G: '#forge:ingots/gold'
-    });
+    }).id('warchasers:bell');
     event.shaped('minecraft:elytra', [
         'SES',
         'MDM',
@@ -53,7 +53,7 @@ onEvent('recipes', event => {
         D: 'minecraft:diamond',
         E: 'minecraft:ender_pearl',
         S: 'minecraft:shulker_shell'
-    });
+    }).id('warchasers:elytra');
     event.shaped('8x minecraft:end_stone', [
         'SSS',
         'SDS',
@@ -61,8 +61,8 @@ onEvent('recipes', event => {
     ], {
         S: '#forge:sandstone',
         D: 'minecraft:popped_chorus_fruit'
-    });
-    event.shapeless('4x minecraft:name_tag', ['minecraft:lead', '#minecraft:signs']);
+    }).id('warchasers:end_stone');
+    event.shapeless('4x minecraft:name_tag', ['minecraft:lead', '#minecraft:signs']).id('warchasers:name_tag');
     event.shaped('2x minecraft:wet_sponge', [
         'WYW',
         'YWY',
@@ -71,7 +71,7 @@ onEvent('recipes', event => {
         Y: '#forge:dyes/yellow',
         W: '#minecraft:wool',
         B: 'minecraft:water_bucket'
-    });
+    }).id('warchasers:wet_sponge');
     event.shaped('minecraft:dragon_egg', [
         'NEN',
         'EOE',
@@ -80,7 +80,7 @@ onEvent('recipes', event => {
         N: 'minecraft:nether_star',
         E: 'minecraft:egg',
         O: 'minecraft:obsidian'
-    });
+    }).id('warchasers:dragon_egg');
     event.shaped('minecraft:shulker_shell', [
         'PPP',
         'PSP',
@@ -88,7 +88,7 @@ onEvent('recipes', event => {
     ], {
         S: 'minecraft:scute',
         P: 'minecraft:chorus_fruit',
-    });
+    }).id('warchasers:shulker_shell');
     event.shaped('minecraft:heart_of_the_sea', [
         'LEL',
         'ENE',
@@ -97,7 +97,7 @@ onEvent('recipes', event => {
         L: 'minecraft:lapis_lazuli',
         N: 'minecraft:nether_star',
         E: 'minecraft:ender_pearl',
-    });
+    }).id('warchasers:heart_of_the_sea');
     event.shaped('minecraft:dragon_breath', [
         'ETE',
         'FBF',
@@ -108,20 +108,20 @@ onEvent('recipes', event => {
         E: 'minecraft:ender_pearl',
         B: 'minecraft:glass_bottle',
         G: 'minecraft:gunpowder',
-    });
+    }).id('warchasers:dragon_breath');
 
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:12, EffectDuration:80}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:allium']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:15, EffectDuration:160}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:azure_bluet']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:23, EffectDuration:7}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:blue_orchid']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:23, EffectDuration:7}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:dandelion']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:8, EffectDuration:120}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:cornflower']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:19, EffectDuration:240}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:lily_of_the_valley']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:10, EffectDuration:160}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:oxeye_daisy']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:16, EffectDuration:100}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:poppy']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:red_tulip']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:orange_tulip']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:white_tulip']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:pink_tulip']);
-    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:20, EffectDuration:160}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:wither_rose']);
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:12, EffectDuration:80}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:allium']).id('warchasers:suspicious_stew_1');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:15, EffectDuration:160}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:azure_bluet']).id('warchasers:suspicious_stew_2');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:23, EffectDuration:7}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:blue_orchid']).id('warchasers:suspicious_stew_3');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:23, EffectDuration:7}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:dandelion']).id('warchasers:suspicious_stew_4');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:8, EffectDuration:120}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:cornflower']).id('warchasers:suspicious_stew_5');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:19, EffectDuration:240}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:lily_of_the_valley']).id('warchasers:suspicious_stew_6');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:10, EffectDuration:160}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:oxeye_daisy']).id('warchasers:suspicious_stew_7');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:16, EffectDuration:100}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:poppy']).id('warchasers:suspicious_stew_8');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:red_tulip']).id('warchasers:suspicious_stew_9');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:orange_tulip']).id('warchasers:suspicious_stew_10');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:white_tulip']).id('warchasers:suspicious_stew_11');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:pink_tulip']).id('warchasers:suspicious_stew_12');
+    event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:20, EffectDuration:160}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:wither_rose']).id('warchasers:suspicious_stew_13');
 
 })
