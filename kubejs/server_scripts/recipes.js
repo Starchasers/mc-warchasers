@@ -123,5 +123,14 @@ onEvent('recipes', event => {
     event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:white_tulip']).id('warchasers:suspicious_stew_11');
     event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:18, EffectDuration:180}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:pink_tulip']).id('warchasers:suspicious_stew_12');
     event.shapeless(Item.of('minecraft:suspicious_stew', {Effects:[{EffectId:20, EffectDuration:160}]} ), ['minecraft:red_mushroom', 'minecraft:brown_mushroom','minecraft:bowl','minecraft:wither_rose']).id('warchasers:suspicious_stew_13');
-
+    
+    event.shaped('create:blaze_burner', [
+        'BBB',
+        'BTB',
+        'BBB'
+    ], {
+        T: 'create:empty_blaze_burner',
+        B: 'minecraft:blaze_rod'
+    }).id('warchasers:blaze_burner');
+    
 })
